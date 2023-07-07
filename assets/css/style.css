@@ -243,8 +243,8 @@ body.nav-active { overflow: hidden; }
 .w-100 {
   width: 60%;
   height: auto;
-  border-top-left-radius: 40%;
-  border-bottom-right-radius: 10px;
+  /* border-top-left-radius: 40%;
+  border-bottom-right-radius: 10px; */
 }
 
 .img-cover {
@@ -394,7 +394,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner { display: none; }
 
-.hero { padding-block-start: calc(var(--pt, 96px) + var(--section-padding)); }
+/* .hero { padding-block-start: calc(var(--pt, 26px) + var(--section-padding)); } */
 
 .hero .title-md {
   font-weight: var(--fw-500);
@@ -424,10 +424,23 @@ body.nav-active { overflow: hidden; }
 .about .container {
   display: grid;
   gap: 30px;
+
 }
 
-.about .section-text,
+.about .section-text {
+  padding-block: 10px;
+}
 
+.about-banner {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.about-banner .w-100 {
+  border-radius: 20px;
+}
 
 
 /*-----------------------------------*\
@@ -453,7 +466,7 @@ body.nav-active { overflow: hidden; }
   color: var(--white);
 }
 
-.cta .btn { margin-inline: auto; }
+
 
 
 /*-----------------------------------*\
@@ -504,11 +517,47 @@ body.nav-active { overflow: hidden; }
   #CONTAINER QUERIES
 \*-----------------------------------*/
 
+.category .title-sm {
+  visibility: hidden;
+}
 
+.btn-container {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/* Layout responsivo para telas maiores que 300px */
+
+@media (max-width: 450px) {
+  .container {
+    max-width: 450px;
+    width: 100%;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .card { padding: 32px; }
+
+  /* Footer */
+
+  .footer-top .container {grid-template-columns: 1fr 1fr; }
+
+  .hero .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    flex-direction: column;
+    align-content: center;
+  }
+
+}
+
 
 /* Layout responsivo para telas maiores que 575px */
 
@@ -673,15 +722,11 @@ body.nav-active { overflow: hidden; }
 
   .cta { text-align: left;}
 
-  .cta .container {
+  /* .cta .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .cta .headline-md {max-width: 22ch; }
-
-  .cta .btn { margin-inline: 0;}
+  } */
 
 
   /* Footer */
