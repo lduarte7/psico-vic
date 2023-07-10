@@ -300,6 +300,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .header {
+  background-color: #f7f7f7;
   position: absolute;
   top: 0;
   left: 0;
@@ -309,7 +310,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .header.active {
-  background-color: var(--white);
+  background-color: #f7f7f7;
   position: fixed;
   box-shadow: var(--shadow-2);
   animation: headerActive 0.5s ease forwards;
@@ -509,19 +510,54 @@ body.nav-active { overflow: hidden; }
 
 .copyright { font-weight: var(--fw-500);}
 
+/*-----------------------------------*\
+  #MORE BUTTON 
+\*-----------------------------------*/
 
+.container .category-card .more {
+  position: relative;
+  padding: 10px;
+  background-color: #f7f7f7;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 
+.container .category-card.active .more {
+  background: #e2dddd;
+}
 
+.container .category-card.active .title-sm {
+  height: auto;
+  content: 'Ler mais';
+}
+
+.container .category-card .title-sm {
+  height: 100px;
+  content: 'Ler menos';
+  overflow: hidden;
+}
+
+.container .category-card  .more::before {
+  content: 'Ler mais';
+}
+
+.container .category-card.active .more::before {
+  content: 'Ler menos';
+}
 
 /*-----------------------------------*\
   #CONTAINER QUERIES
 \*-----------------------------------*/
 
-.category .title-sm {
-  visibility: hidden;
-}
+.category {   background-color: #f7f7f7;}
+
+
 
 .btn-container {
+  margin-top: 10px;
   width: 100%;
   display: flex;
   align-content: center;
