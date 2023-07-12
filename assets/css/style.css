@@ -17,6 +17,7 @@
 --white: hsl(0, 0%, 100%);
 --black: hsl(0, 0%, 0%);
 --black_10: hsla(0, 0%, 0%, 0.1);
+--pink: #d86956;
 
 
   /* tipografia */ 
@@ -514,20 +515,21 @@ body.nav-active { overflow: hidden; }
   #MORE BUTTON 
 \*-----------------------------------*/
 
+.container .category-card:is(:hover, :focus-visible) { color: #0e5355; }
+
 .container .category-card .more {
   position: relative;
   padding: 10px;
-  background-color: #f7f7f7;
+  background-color: var(--pink);
   margin-top: 15px;
   display: inline-block;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 10px;
   text-transform: uppercase;
+  border-radius: 3px 3px 3px 3px;
 }
 
-.container .category-card.active .more {
-  background: #e2dddd;
-}
+
 
 .container .category-card.active .title-sm {
   height: auto;
@@ -535,13 +537,14 @@ body.nav-active { overflow: hidden; }
 }
 
 .container .category-card .title-sm {
-  height: 5px;
+  height: 4px;
   content: 'Ler menos';
   overflow: hidden;
 }
 
 .container .category-card  .more::before {
   content: 'Ler mais';
+  color: var(--white);
 }
 
 .container .category-card.active .more::before {
