@@ -396,7 +396,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner { display: none; }
 
-/* .hero { padding-block-start: calc(var(--pt, 26px) + var(--section-padding)); } */
+.hero { padding-block-start: calc(var(--pt, 60px) + var(--section-padding)); }
 
 .hero .title-md {
   font-weight: var(--fw-500);
@@ -623,13 +623,12 @@ body.nav-active { overflow: hidden; }
   :root {
 
     /* Tipografia */
-  --headline-lg: 6rem;
-  --headline-md: 3.8rem;
-
+    --headline-lg: 6rem;
+    --headline-md: 3.8rem;
 
     /* espaçamento */
 
-    --section-padding: 80px;
+    --section-padding: 100px;
 
 
   }
@@ -656,9 +655,9 @@ body.nav-active { overflow: hidden; }
 
   :root {
 
-    /* tipografia
+    /* tipografia */
     --headline-lg: 7.7rem;
-    --headline-md: 4.4rem; */
+    --headline-md: 4.4rem; 
 
     /* espaçamento */
     --section-padding: 100px;
